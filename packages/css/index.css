@@ -50,3 +50,6 @@ span {
   background-color: var(--backgroundSecondary);
 }
 
+ul {
+  padding-left: 1rem;
+}
