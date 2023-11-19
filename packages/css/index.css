@@ -13,6 +13,15 @@
   --borderColor: #ccc;
 }
 
+html[data-theme='dark'] {
+  --backgroundColor: #121212;
+  --backgroundSecondary: #333;
+  --textPrimary: #eee;
+  --textSecondary: #999;
+  --blue: #3a8cea;
+  --borderColor: #555;
+}
+
 body {
   margin: 0;
   padding: 0;

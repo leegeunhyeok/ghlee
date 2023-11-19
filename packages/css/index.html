@@ -42,5 +42,21 @@
       </code>
       <pre>Hello, world!</pre>
     </section>
+    <section>
+      <button id="toggle_theme">Toggle theme</button>
+    </section>
   </main>
+  <script>
+
+    window.onload = function () {
+      var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset['theme'] = isDark ? 'dark' : 'light';
+
+      document.getElementById('toggle_theme').onclick = function () {
+        isDark = !isDark;
+        document.documentElement.dataset['theme'] = isDark ? 'dark' : 'light';
+      };
+    };
+
+  </script>
 </html>
