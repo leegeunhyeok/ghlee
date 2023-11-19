@@ -1,7 +1,9 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
 
-* {
+*, :after, :before {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
 }
 
 :root {
@@ -9,6 +11,7 @@
   --backgroundSecondary: #eee;
   --textPrimary: #2e2e2e;
   --textSecondary: #777;
+  --focus: #999;
   --blue: #1c96f0;
   --borderColor: #ccc;
 }
@@ -18,6 +21,7 @@ html[data-theme='dark'] {
   --backgroundSecondary: #333;
   --textPrimary: #eee;
   --textSecondary: #999;
+  --focus: #bbb;
   --blue: #3a8cea;
   --borderColor: #555;
 }
@@ -61,4 +65,23 @@ span {
 
 ul {
   padding-left: 1rem;
+}
+
+button {
+  color: var(--textPrimary);
+  padding: .75rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--backgroundSecondary);
+  font-family: ui-monospace, Consolas, monospace;
+  overflow: auto;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+a:focus {
+  border-radius: .25rem;
 }
