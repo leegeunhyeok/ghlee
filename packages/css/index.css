@@ -11,19 +11,28 @@
   --backgroundSecondary: #eee;
   --textPrimary: #2e2e2e;
   --textSecondary: #777;
-  --focus: #999;
-  --blue: #1c96f0;
   --borderColor: #ccc;
+  /* colors */
+  --brand: #1c96f0;
+  --classting: #00c896;
+  --toss: #3182f6;
+  --js: #f0db4f;
+  --ts: #3178c6;
+  --rs: #dea584;
+  --java: #b07219;
+  --kt: #a97bff;
+  --objc: #438eff;
+  --swift: #f05138;
+  --unknown: #555;
 }
 
 html[data-theme='dark'] {
-  --backgroundColor: #121212;
-  --backgroundSecondary: #333;
-  --textPrimary: #eee;
+  --backgroundColor: #222;
+  --backgroundSecondary: #3f3f3f;
+  --textPrimary: #ddd;
   --textSecondary: #999;
-  --focus: #bbb;
-  --blue: #3a8cea;
   --borderColor: #555;
+  --unknown: #777;
 }
 
 body {
@@ -80,8 +89,20 @@ button {
 
 :focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--blue);
+  box-shadow: 0 0 0 2px var(--brand);
 }
 a:focus {
   border-radius: .25rem;
 }
+
+.text-brand { color: var(--brand); }
+.text-classting { color: var(--classting); }
+.text-toss { color: var(--toss); }
+.text-js { color: var(--js); }
+.text-ts { color: var(--ts); }
+.text-rs { color: var(--rs); }
+.text-java { color: var(--java); }
+.text-kt { color: var(--kt); }
+.text-objc { color: var(--objc); }
+.text-swift { color: var(--swift); }
+.text-unknown { color: var(--unknown); }
