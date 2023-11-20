@@ -26,13 +26,15 @@
   --unknown: #555;
 }
 
-html[data-theme='dark'] {
-  --backgroundColor: #222;
-  --backgroundSecondary: #3f3f3f;
-  --textPrimary: #ddd;
-  --textSecondary: #999;
-  --borderColor: #555;
-  --unknown: #777;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: #222;
+    --backgroundSecondary: #3f3f3f;
+    --textPrimary: #ddd;
+    --textSecondary: #999;
+    --borderColor: #555;
+    --unknown: #777;
+  }
 }
 
 body {
