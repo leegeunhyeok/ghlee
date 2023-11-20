@@ -1,7 +1,7 @@
 {
   "name": "@ghlee/css",
   "version": "0.0.0",
-  "main": "index.css",
+  "main": "dist/index.css",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/leegeunhyeok/ghlee.git"
@@ -13,5 +13,19 @@
     "url": "https://github.com/leegeunhyeok/ghlee/issues"
   },
   "homepage": "https://github.com/leegeunhyeok/ghlee#readme",
-  "files": []
+  "scripts": {
+    "build": "sass index.scss | postcss --use autoprefixer --no-map > dist/index.css"
+  },
+  "files": [],
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.69.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not dead"
+  ]
 }

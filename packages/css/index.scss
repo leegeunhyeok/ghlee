@@ -24,10 +24,8 @@
   --objc: #438eff;
   --swift: #f05138;
   --unknown: #555;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
+  @media (prefers-color-scheme: dark) {
     --backgroundColor: #222;
     --backgroundSecondary: #3f3f3f;
     --textPrimary: #ddd;
@@ -46,7 +44,11 @@ body {
   line-height: 1.5em;
 }
 
-a { color: var(--blue); }
+a {
+  color: var(--blue);
+
+  &:focus { border-radius: .25rem; }
+}
 
 i { font-weight: 200; }
 
@@ -89,14 +91,6 @@ button {
   cursor: pointer;
 }
 
-:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--brand);
-}
-a:focus {
-  border-radius: .25rem;
-}
-
 .text-brand { color: var(--brand); }
 .text-classting { color: var(--classting); }
 .text-toss { color: var(--toss); }
@@ -108,3 +102,8 @@ a:focus {
 .text-objc { color: var(--objc); }
 .text-swift { color: var(--swift); }
 .text-unknown { color: var(--unknown); }
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--brand);
+}
